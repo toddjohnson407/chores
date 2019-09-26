@@ -1,0 +1,15 @@
+.page {
+  align-items: center;
+  flex-direction: column;
+}
+
+.form {
+  margin-left: 30;
+  margin-right: 30;
+  flex-grow: 2;
+  vertical-align: middle;
+}
+
+#login-field {
+  border: 4px solid gray !important;
+}

@@ -1,0 +1,30 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" id="central-page">    
+  <BottomNavigation id="bottomNav" automationText="tabNavigation" selectedIndex="1" selectedIndexChanged="onSelectedIndexChanged">
+      <TabStrip>
+          <TabStripItem>
+              <!-- <Image src="font://&#xf6d9" class="fas"></Image> -->
+              <Label text="Dashboard"></Label>
+          </TabStripItem>
+          <TabStripItem>
+              <!-- <Image src="font://&#xf2d21" class="fas"></Image> -->
+              <Label text="Chores"></Label>
+          </TabStripItem>
+          <TabStripItem>
+              <!-- <Image src="font://&#xf3eb" class="fab"></Image> -->
+              <Label text="Manage"></Label>
+          </TabStripItem>
+      </TabStrip>
+      <TabContentItem>
+        <Frame defaultPage="central/dashboard/dashboard-page"></Frame>
+
+      </TabContentItem>
+      <TabContentItem>
+          <Frame defaultPage="central/chores/chores-page"></Frame>
+
+      </TabContentItem>
+      <TabContentItem>
+          <Frame defaultPage="central/manage/manage-page"></Frame>
+
+      </TabContentItem>
+  </BottomNavigation>
+</Page>
