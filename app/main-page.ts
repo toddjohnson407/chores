@@ -18,16 +18,25 @@ export function navigatingTo(args: EventData) {
 }
 
 export function entryLoad() {
+  console.log('here first');
     Promise.resolve(Kinvey.User.getActiveUser())
     .then((user: Kinvey.User) => {
 			const frame = getFrameById("main-frame");
       if (user) {
-        const navigationEntry: NavigationEntry = {
-					moduleName: 'central/central-page',
-					clearHistory: true
-        };
-        console.log(navigationEntry);
-				frame.navigate(navigationEntry);
+        console.log(user);
+        if (!user['group_id']) {
+          const navigationEntry: NavigationEntry = {
+            moduleName: 'account-type/account-type-page',
+            clearHistory: true
+          };
+          frame.navigate(navigationEntry);
+        } else {
+          const navigationEntry: NavigationEntry = {
+            moduleName: 'central/central-page',
+            clearHistory: true
+          };
+          frame.navigate(navigationEntry);
+        }
       } else {
 				const navigationEntry: NavigationEntry = {
 					moduleName: 'login-page',

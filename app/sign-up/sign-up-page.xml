@@ -7,7 +7,7 @@
         <TextField text="{{ newUser.password }}" class="input input-border" hint="Password" secure="true" returnKeyType="next"></TextField>
         <TextField text="{{ newUser.confirm_password }}" class="input input-border" hint="Confirm Password" secure="true" returnKeyType="done"></TextField>
         <StackLayout orientation="horizontal" horizontalAlignment="center">
-				  <Button text="Register" tap="{{ registerUser }}" class="btn btn-primary" />
+            <Button text="Register" tap="{{ registerUser }}" class="btn btn-primary" />
         </StackLayout>
     </StackLayout>
 </Page>

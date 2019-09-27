@@ -6,20 +6,19 @@ export function navigatingTo(args: EventData) {
 
 }
 
-export function openLogin(args: EventData) {
+export function joinGroup(args: EventData) {
   const frame = getFrameById("main-frame");
   const navigationEntry: NavigationEntry = {
-    moduleName: 'sign-in/sign-in-page',
+    moduleName: 'account-type/join-group/join-group-page',
+    clearHistory: true
   };
   if (frame) frame.navigate(navigationEntry);
 }
 
-export function openRegister(args: EventData) {
+export function createGroup(args: EventData) {
   const frame = getFrameById("main-frame");
   const navigationEntry: NavigationEntry = {
-    moduleName: 'sign-up/sign-up-page',
+    moduleName: 'account-type/create-group/create-group-page',
   };
-  if (frame) {
-    frame.navigate(navigationEntry);
-  }
+  if (frame) frame.navigate(navigationEntry);
 }

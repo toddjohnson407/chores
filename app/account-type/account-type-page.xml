@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="entryLoad" class="entry-page">
+
+  <FlexboxLayout class="entry-layout" flexDirection="column" justifyContent="space-around" alignItems="center">
+    <Label text="Chores" class="entry-title" flexGrow="1"/>
+    <Button text="Join Group" tap="joinGroup" class="entry-btn"/>
+    <Button text="Create a Group" tap="createGroup" class="entry-btn"/>
+  </FlexboxLayout>
+
+</Page>

@@ -1,0 +1,30 @@
+
+.entry-page {
+  background-color: rgb(24, 248, 173);
+}
+
+.entry-layout {
+  margin-bottom: 50px;
+}
+
+.entry-title {
+  margin-bottom: 10%;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+  font-size: 50%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.entry-btn {
+  width: 80%;
+  margin: 24px;
+  height: 7%;
+  border-radius: 10%;
+  letter-spacing: 0.2px;
+  font-size: 20%;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgba(114, 114, 114, 0.8);
+}

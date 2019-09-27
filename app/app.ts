@@ -20,6 +20,7 @@ Kinvey.ping()
         console.log(`Kinvey Ping Success. Kinvey Service is alive, version: ${response.version}, response: ${response.kinvey}`);
     })
     .catch((error) => {
+        console.log(error);
         console.log(`Kinvey Ping Failed. Response: ${error.description}`);
     });
 

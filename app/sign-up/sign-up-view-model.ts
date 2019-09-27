@@ -1,7 +1,7 @@
 import { Observable } from "tns-core-modules/data/observable";
 import * as Kinvey from 'kinvey-nativescript-sdk';
-import { getFrameById } from "tns-core-modules/ui/frame/frame";
 import { NewUser } from './new-user';
+import { NavigationEntry, getFrameById } from "tns-core-modules/ui/frame/frame";
 
 export class RegisterModel extends Observable {
 
@@ -25,6 +25,13 @@ export class RegisterModel extends Observable {
     console.log('saving new user object');
     console.log(this.newUser);
     if (this.isValid()) {
+      // console.log(dataStore);
+      // const query = new Kinvey.Query();
+      // query.equalTo('code', this.newUser.group_code);
+
+      // dataStore.find(query).subscribe((group: any) => {
+      //   console.log(group);
+      // })
 
       const registerPromise = Kinvey.User.signup({
         username: this.newUser.username,
@@ -34,12 +41,12 @@ export class RegisterModel extends Observable {
         last_name: this.newUser.last_name
       })
         .then((user: Kinvey.User) => {
+          const frame = getFrameById('main-frame');
+          frame.navigate('account-type/account-type-page');
           console.log(user);
-          console.log('FUCK FINALLY')
         })
         .catch((error: any) => {
           console.log(error);
-          console.log('shit');
         });
       console.log("VALID");
 
