@@ -1,3 +1,5 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo" class="page">
   <Label text="Chores"/>
+  <Button text="Logout" tap="logout" />
+  
 </Page>

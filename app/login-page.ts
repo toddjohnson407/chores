@@ -10,6 +10,7 @@ export function openLogin(args: EventData) {
   const frame = getFrameById("main-frame");
   const navigationEntry: NavigationEntry = {
     moduleName: 'sign-in/sign-in-page',
+    clearHistory: true
   };
   if (frame) frame.navigate(navigationEntry);
 }
@@ -18,6 +19,7 @@ export function openRegister(args: EventData) {
   const frame = getFrameById("main-frame");
   const navigationEntry: NavigationEntry = {
     moduleName: 'sign-up/sign-up-page',
+    clearHistory: true
   };
   if (frame) {
     frame.navigate(navigationEntry);

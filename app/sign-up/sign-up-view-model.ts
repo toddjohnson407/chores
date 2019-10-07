@@ -22,16 +22,7 @@ export class RegisterModel extends Observable {
 
   /** If form is valid, send api request to create new user */
 	registerUser(args: any) {
-    console.log('saving new user object');
-    console.log(this.newUser);
     if (this.isValid()) {
-      // console.log(dataStore);
-      // const query = new Kinvey.Query();
-      // query.equalTo('code', this.newUser.group_code);
-
-      // dataStore.find(query).subscribe((group: any) => {
-      //   console.log(group);
-      // })
 
       const registerPromise = Kinvey.User.signup({
         username: this.newUser.username,

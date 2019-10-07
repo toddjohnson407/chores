@@ -1,3 +1,9 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
-    Create a Group
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="onNavigatedTo">
+    <StackLayout class="form">
+        <TextField text="{{ newGroup.name }}" id="login-field" class="input input-border" hint="Name" returnKeyType="next"></TextField>
+        <TextField text="{{ newGroup.code }}" class="input input-border" hint="Group Code" returnKeyType="next"></TextField>
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <Button text="Create Group" tap="{{ registerGroup }}" class="btn btn-primary" />
+        </StackLayout>
+    </StackLayout>
 </Page>

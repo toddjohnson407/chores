@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="entryLoad" class="entry-page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" loaded="pageLoaded" class="entry-page">
 
   <FlexboxLayout class="entry-layout" flexDirection="column" justifyContent="space-around" alignItems="center">
     <Label text="Chores" class="entry-title" flexGrow="1"/>

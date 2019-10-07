@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" id="central-page">    
+<Page xmlns="http://www.nativescript.org/tns.xsd" id="central-page" loaded="onLoaded">    
   <BottomNavigation id="bottomNav" automationText="tabNavigation" selectedIndex="1" selectedIndexChanged="onSelectedIndexChanged">
       <TabStrip>
           <TabStripItem>

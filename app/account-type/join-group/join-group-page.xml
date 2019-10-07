@@ -1,4 +1,8 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="onLoaded" navigatedTo="onNavigatedTo">
-    <Label text="Join a Group" textWrap="true" />
-    
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="onNavigatedTo">
+    <StackLayout class="form">
+        <TextField text="{{ groupCode }}" class="input input-border" hint="Group Code" returnKeyType="next"></TextField>
+        <StackLayout orientation="horizontal" horizontalAlignment="center">
+            <Button text="Join Group" tap="{{ joinGroup }}" class="btn btn-primary" />
+        </StackLayout>
+    </StackLayout>
 </Page>
