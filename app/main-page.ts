@@ -11,46 +11,26 @@ import { getFrameById, NavigationEntry } from 'tns-core-modules/ui/frame';
 import * as Kinvey from 'kinvey-nativescript-sdk';
 
 
+
 // Event handler for Page "navigatingTo" event attached in main-page.xml
 export function navigatingTo(args: EventData) {
     const page = <Page>args.object;
 		page.bindingContext = new HelloWorldModel();
 }
 
-export function entryLoad() {
-  console.log('here first');
-    Promise.resolve(Kinvey.User.getActiveUser())
-    .then((user: Kinvey.User) => {
-			const frame = getFrameById("main-frame");
-      if (user) {
-        console.log(user);
-        if (!user['group_id']) {
-          const navigationEntry: NavigationEntry = {
-            moduleName: 'account-type/account-type-page',
-            clearHistory: true
-          };
-          frame.navigate(navigationEntry);
-        } else {
-          const navigationEntry: NavigationEntry = {
-            moduleName: 'central/central-page',
-            clearHistory: true
-          };
-          frame.navigate(navigationEntry);
-        }
-      } else {
-				const navigationEntry: NavigationEntry = {
-					moduleName: 'login-page',
-					clearHistory: true
-				};
-				frame.navigate(navigationEntry);
-      }
-      return user;
-    })
-    .then((user: Kinvey.User) => {
-      // ...
-    })
-    .catch((error: any) => {
-        console.log('promise error - active user', error);
-      // ...
-    });
+export async function entryLoad() {
+  const frame = getFrameById("main-frame");
+  if (Kinvey.User.getActiveUser() && Kinvey.User.getActiveUser().data['group_id']) {
+    const navigationEntry: NavigationEntry = {
+      moduleName: 'central/central-page',
+      clearHistory: true
+    };
+    frame.navigate(navigationEntry);
+  } else {
+    const navigationEntry: NavigationEntry = {
+      moduleName: (Kinvey.User.getActiveUser()) ? 'account-type/account-type-page' : 'login-page',
+      clearHistory: true
+    };
+    frame.navigate(navigationEntry);
+  }
 }

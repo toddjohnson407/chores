@@ -1,11 +1,11 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
     <StackLayout class="form">
-        <TextField text="{{ newUser.first_name }}" id="login-field" class="input input-border" hint="First Name" returnKeyType="next"></TextField>
-        <TextField text="{{ newUser.last_name }}" id="login-field" class="input input-border" hint="Last Name" returnKeyType="next"></TextField>
-        <TextField text="{{ newUser.username }}" class="input input-border" hint="Username" returnKeyType="next"></TextField>
-        <TextField text="{{ newUser.email }}" class="input input-border" hint="Email" returnKeyType="next" keyboardType="email"></TextField>
-        <TextField text="{{ newUser.password }}" class="input input-border" hint="Password" secure="true" returnKeyType="next"></TextField>
-        <TextField text="{{ newUser.confirm_password }}" class="input input-border" hint="Confirm Password" secure="true" returnKeyType="done"></TextField>
+        <TextField text="{{ newUser.first_name }}" id="login-field" class="form-field input input-border" hint="First Name" returnKeyType="next"></TextField>
+        <TextField text="{{ newUser.last_name }}" id="login-field" class="form-field input input-border" hint="Last Name" returnKeyType="next"></TextField>
+        <TextField text="{{ newUser.username }}" class="form-field input input-border" hint="Username" returnKeyType="next"></TextField>
+        <TextField text="{{ newUser.email }}" class="form-field input input-border" hint="Email" returnKeyType="next" keyboardType="email"></TextField>
+        <TextField text="{{ newUser.password }}" class="form-field input input-border" hint="Password" secure="true" returnKeyType="next"></TextField>
+        <TextField text="{{ newUser.confirm_password }}" class="form-field input input-border" hint="Confirm Password" secure="true" returnKeyType="done"></TextField>
         <StackLayout orientation="horizontal" horizontalAlignment="center">
             <Button text="Register" tap="{{ registerUser }}" class="btn btn-primary" />
         </StackLayout>

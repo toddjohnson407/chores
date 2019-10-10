@@ -17,5 +17,49 @@ The following CSS rule changes the font size of all UI
 components that have the btn class name.
 */
 .btn {
-    font-size: 18;
+  font-size: 18;
+}
+
+.form {
+  padding: 0 48px 96px;
+  color: white;
+}
+
+.form-field {
+  width: 75%;
+  margin: 16px 0;
+  font-size: 120%;
+  font-weight: bold;
+  border-color: white;
+  border-width: 4px;
+  border-radius: 50px;
+}
+
+.submit-btn {
+  width: 85%;
+  /* height: 20%; */
+  /* border-radius: 10%; */
+  border-radius: 50px;
+  letter-spacing: 0.2px;
+  font-size: 20%;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgba(114, 114, 114, 0.8);
+}
+
+.general-page {
+  background-color: rgb(24, 248, 173);
+}
+
+.entry-layout {
+  /* margin-bottom: 50px; */
+}
+
+.entry-title {
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
+  font-size: 50%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }

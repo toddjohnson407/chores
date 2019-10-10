@@ -1,10 +1,14 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" class="general-page">
+
+  <FlexboxLayout class="entry-layout" flexDirection="column" justifyContent="space-around" alignItems="center">
+    <Label text="Chores" class="entry-title" flexGrow="1"/>
     <StackLayout class="form">
-        <TextField text="{{ newUser.username }}" class="input input-border" hint="Username" returnKeyType="next"></TextField>
-        <TextField text="{{ newUser.password }}" class="input input-border" hint="Password" secure="true" returnKeyType="next"></TextField>
-        <StackLayout orientation="horizontal" horizontalAlignment="center">
-            <Button text="Login" tap="{{ loginUser }}" class="btn btn-primary" />
-        </StackLayout>
+      <TextField text="{{ existingUser.username }}" class="form-field input" hint="Username" returnKeyType="next"></TextField>
+      <TextField text="{{ existingUser.password }}" class="form-field input" hint="Password" secure="true" returnKeyType="next"></TextField>
+      <StackLayout orientation="horizontal" horizontalAlignment="center" class="sign-in-btn-ctn">
+        <Button text="Login" tap="{{ loginUser }}" class="submit-btn btn btn-primary" />
+      </StackLayout>
     </StackLayout>
+  </FlexboxLayout>
 </Page>
 
