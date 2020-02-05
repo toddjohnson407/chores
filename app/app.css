@@ -48,7 +48,8 @@ components that have the btn class name.
 }
 
 .general-page {
-  background-color: rgb(24, 248, 173);
+  /* background-color: rgb(24, 248, 173); */
+  background-color: #CAD9F5;
 }
 
 .entry-layout {
